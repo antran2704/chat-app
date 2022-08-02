@@ -1,0 +1,65 @@
+@import "../../App.scss";
+
+.login {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.login__wrap {
+  width: 60%;
+  text-align: center;
+
+  @include mobile {
+    width: 80%;
+  }
+}
+
+.login__header {
+}
+.login__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.login__title {
+}
+.login__btn-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 10px;
+
+  @include tablet {
+      width: 100%;
+  }
+}
+.login__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  padding: 4px 0;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #dadada;
+  gap: 10px;
+  transition: all ease 0.2s;
+
+  & .login__icon {
+    font-size: 18px;
+  }
+
+  &:hover {
+    color: #40a9ff;
+    border-color: #40a9ff;
+    cursor: pointer;
+    transition: all ease 0.2s;
+  }
+
+  @include tablet() {
+    border-radius: 2px;
+  }
+}

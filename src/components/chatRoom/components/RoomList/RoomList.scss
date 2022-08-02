@@ -1,0 +1,122 @@
+@import "../../../../App.scss";
+
+.room__list {
+  list-style: none;
+}
+
+.room__header {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 10px;
+  cursor: pointer;
+
+  @include tablet {
+    padding: 12px 10px;
+    font-size: 18px;
+  }
+  @include mobile {
+    font-size: 14px;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
+.room__icon {
+  transform: rotate(-90deg);
+  transition: all ease 0.2s;
+
+  &.show {
+    transform: rotate(0);
+    transition: all ease 0.2s;
+  }
+
+  @include mobile {
+    font-size: 20px;
+  }
+}
+
+.room__wrap {
+  width: 80%;
+  margin: 0 auto;
+  opacity: 0;
+  height: 0;
+  transition: all linear 0.2s;
+
+  &.show {
+    opacity: 1;
+    height: 100%;
+    transition: all linear 0.2s;
+  }
+
+  @include mobile {
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+.room__wrap-item {
+  max-height: 360px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 6px;
+    overflow-y: overlay;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow-y: overlay;
+  }
+
+  @include mobile {
+    max-height: 240px;
+  }
+}
+.room__item {
+  padding: 6px 16px;
+  display: block;
+  visibility: hidden;
+  cursor: pointer;
+  transition: all linear 0.2s;
+
+  &.show {
+    visibility: visible;
+    transition: all linear 0.2s;
+  }
+
+  &.active {
+    color: #1890ff;
+  }
+
+  @include mobile {
+    padding: 6px 0;
+  }
+}
+
+.room__btn {
+  display: flex;
+  visibility: hidden;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  padding: 8px 16px;
+  cursor: pointer;
+  gap: 10px;
+
+  &.show {
+    visibility: visible;
+    transition: all linear 0.2s;
+  }
+
+  @include mobile {
+    padding: 8px;
+    font-size: 14px;
+    flex-direction: column;
+    border-top: 1px solid rgb(82, 38, 83);
+  }
+}

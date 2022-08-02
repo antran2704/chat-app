@@ -1,0 +1,95 @@
+@import "../../../../App.scss";
+
+.side-bar {
+  width: 24%;
+  height: 100%;
+  background: rgb(63, 14, 64);
+  color: white;
+}
+
+.side-bar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid rgb(82, 38, 83);
+
+  @include tablet {
+    padding: 12px 10px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.side-bar__infor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  & img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+
+    @include tablet {
+      width: 28px;
+      height: 28px;
+    }
+    @include mobile {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @include tablet {
+    font-size: 16px;
+  }
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.side-bar__img {
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7b1fa2;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+.side-bar__name {
+}
+.side-bar__out {
+  display: flex;
+  align-items: center;
+  padding: 6px 14px;
+  font-size: 16px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  cursor: pointer;
+  border-radius: 4px;
+  gap: 6px;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.side-bar__out-btn {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+  @include mobile {
+    font-size: 28px;
+  }
+}
